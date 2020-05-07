@@ -1,0 +1,37 @@
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/coverr-positano-landscape-1570959933887.mp4" type="video/mp4">
+  </video>
+     </div>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Favourite Travel Destinations</h1>
+        <%= link_to "Add yours", new_destination_path(@destination), :class => "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="content d-flex">
+  <div class="cards">
+<% @destinations.each do |destination| %>
+  <div class="card-cocktail" style="background-image: url( <%= cl_image_path destination.photo.key %>)">
+
+  <h2><%= link_to "#{destination.name}", destination_path(destination), class: "card-link" %></h2>
+ </div>
+<% end %>
+</div>
+</div>
+
+
+<div class="footer">
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-twitter-square"></i>
+  <i class="fab fa-instagram"></i>
+  <p>Amazing destinations for enjoyable times</p>
+</div>
+
+
+
+

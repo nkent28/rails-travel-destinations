@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-1 my-4 p-1">
+        <div class="card pt-2 mr-6" style="width: 45rem; height: 45rem;">
+          <div class="text-center">
+            <h2><%= @destination.name %></h2>
+            <div>
+              <%= cl_image_tag @destination.photo.key, height: 300, width: 400, crop: :fill%>
+            </div>
+          </div>
+            <div class="text-center">
+              <p><strong>Location:</strong><%= @destination.location %></p>
+              <p><strong>Date:</strong> <%= @destination.date.strftime('%d-%m-%Y') %></p>
+              <p><strong>Description:</strong> <%= @destination.description %></p>
+              <p><strong>First Name:</strong> <%= @destination.first_name %></p>
+               <%= link_to "Back to Main page", destinations_path(@destination), :class => "btn btn-danger" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
