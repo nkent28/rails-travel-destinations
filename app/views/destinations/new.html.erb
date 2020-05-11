@@ -9,7 +9,7 @@
             </div>
             <%= simple_form_for(@destination) do |f| %>
             <%= f.input :name %>
-            <%= f.input :photo, as: :file %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <%= f.input :location %>
             <%= f.input :date %>
             <%= f.input :description %>
