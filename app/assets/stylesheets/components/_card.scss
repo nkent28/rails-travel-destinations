@@ -24,4 +24,33 @@
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:20px;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddf3f5;
+}
+
+.section {
+  width: 49%;
+  height: 100%;
+  margin-left: 10px;
+}
+
+
+
 
