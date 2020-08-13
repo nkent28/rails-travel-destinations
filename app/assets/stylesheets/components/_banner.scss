@@ -10,3 +10,14 @@
   width: 100%;
   height: auto;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+  height: 135vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;;
+}
+}
